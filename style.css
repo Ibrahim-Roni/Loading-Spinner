@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#000, #1c002c);
+}
+
+.loading {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: conic-gradient(#0000 10%, #8f44fd);
+    border-radius: 50%;
+    -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 25px), #000 0);
+    animation: animate 2s infinite linear;
+}
+
+@keyframes animate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
